@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Zen+Maru+Gothic:wght@700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* global */
+html, body {
+	@apply scrollbar-none;
+}
+
+::-webkit-scrollbar {
+	width: 4px;
+	height: 4px; 
+	cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+	@apply rounded-full cursor-pointer;
+}
+
+::-webkit-scrollbar-thumb {
+	@apply rounded-full cursor-pointer;
+}
+
+.no-default {
+	@apply border-none focus:outline-none;
+}
+
+.button {
+	@apply no-default bg-white text-blue font-semibold px-4 py-2 rounded-full disabled:opacity-50;
+}
+
+a {
+	@apply no-default underline underline-offset-4 decoration-1 decoration-yellow;
+}
+
+h1 {
+	@apply text-3xl font-semibold py-8;
+}
+
+/* home */
+
+.notes-list {
+	@apply columns-1 md:columns-2 md:gap-8;
+}
+
+/* pages */
+.section {
+	@apply w-screen px-0 md:px-8 block font-default;
+}
+
+.prompt {
+	@apply bg-white px-4 py-2 rounded-lg mb-2;
+}
+
+.answer {
+	@apply bg-yellow;
+}
